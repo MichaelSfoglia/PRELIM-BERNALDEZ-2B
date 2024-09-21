@@ -8,11 +8,13 @@ public class Main {
     
     public static void main(String[] args) {
         Account acc = new Account();
+        Receipt rec = new Receipt();
+        Salary sal = new Salary();
         
         do{
-            System.out.println("1. ACCOUNTS \n2. SALARIES \n3. RECEIPT \n4. EXIT");
+            System.out.println("1. ACCOUNTS \n2. SALARIES \n3. RECEIPT \n4. EXIT \n");
         
-            System.out.printf("Enter program: (1-3): ");
+            System.out.printf("Enter program: ");
             option = in.nextInt();
 
             switch(option){
@@ -21,13 +23,19 @@ public class Main {
                     break;
                     
                 case 2:
+                    sal.salInit();
                     break;
                     
                 case 3:
+                    rec.recInit();
+                    break;
+                    
+                case 4:
+                    System.out.println("Program exited.\n");
                     break;
                     
                 default:
-                    System.out.println("No program found.");
+                    System.out.println("No program found.\n");
             }
         } while(option != 4);
     }
